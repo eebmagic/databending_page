@@ -27,7 +27,7 @@ var shift = function() {
     const data = imageData.data
 
     // const shift = parseInt(imageData.width * 1.5);
-    const shift = shiftSlider + shiftOffset;
+    const shift = (shiftSlider*4) + shiftOffset;
     console.log(`pixel volume: ${shiftSlider}`);
     console.log(`pixel roll: ${shiftOffset}`);
     console.log(`Using shift of: ${shift}`);
@@ -134,7 +134,7 @@ img.onload = function(){
             value: shiftSlider,
             step: 1,
             min: 0,
-            max: imageData.width,
+            max: parseInt(imageData.width/4) * imageData.height,
             slide: (event, ui) => {
                 console.log(ui.value);
                 shiftSlider = ui.value;
