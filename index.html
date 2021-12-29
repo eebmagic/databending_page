@@ -1,13 +1,55 @@
 <html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JQuery imports -->
+  <!-- <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> -->
+  <link href="https://code.jquery.com/ui/1.10.4/themes/start/jquery-ui.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
 <body>
     <h1>Canvas Data Bending</h1>
-    <button id='invertButton' onClick='invert()'>Invert</button>
-    <button id='shiftButton' onClick='shift()'>Shift</button>
-    <button id='echoButton' onClick='echo()'>Echo</button>
-    <button id='noiseButton' onClick='noise()'>Noise</button>
-    <br>
-    <br>
-    <canvas id="myCanvas" width="480"></canvas>
+
+    <div class="content">
+        <div class="canvasImage">
+            <canvas id="myCanvas" width="480"></canvas>
+        </div>
+
+        <div class="worktable">
+            <h1> worktable space </h1>
+            <br>
+            <br>
+            <button id='invertButton' onClick='invert()'>Invert</button>
+            <p>revolve point</p>
+            <div id="slider-invert"></div>
+
+            <br>
+            <br>
+            <button id='shiftButton' onClick='shift()'>Shift</button>
+            <p>shift</p>
+            <div id="slider-shift"></div>
+            <p>roll</p>
+            <div id="slider-offset"></div>
+
+            <br>
+            <br>
+            <button id='echoButton' onClick='echo()'>Echo</button>
+            <p>width</p>
+            <div id="slider-echo-width"></div>
+            <p>weight</p>
+            <div id="slider-echo-weight"></div>
+            <p>roll</p>
+            <div id="slider-echo-roll"></div>
+
+            <br>
+            <br>
+            <button id='noiseButton' onClick='noise()'>Noise</button>
+            <p>width</p>
+            <div id="slider-noise-width"></div>
+        </div>
+    </div>
+
     <script src='script.js'></script>
 </body>
 </html>
